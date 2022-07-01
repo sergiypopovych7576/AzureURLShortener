@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "e9669e14-96df-456e-8e20-f7b858e78af3",
+		"name": "URLShortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUrl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"Azure1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}process",
+					"host": [
+						"{{URL}}process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Navigate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}navigate",
+					"host": [
+						"{{URL}}navigate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://sp-url-shortener.azurewebsites.net/api/"
+		}
+	]
+}
